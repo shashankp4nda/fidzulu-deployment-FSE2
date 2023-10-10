@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@500&family=Poppins&display=swap');
+@import "node_modules/primeng/resources/themes/saga-blue/theme.css";
+@import "node_modules/primeng/resources/primeng.min.css";
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-family: 'Gabarito', cursive;
+    font-size: 50px;
+}
