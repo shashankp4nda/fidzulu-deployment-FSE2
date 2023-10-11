@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { NavbarComponent } from './navbar.component';
 import { MenuItem } from 'primeng/api';
 import { MenubarModule } from 'primeng/menubar';
+import { AppRoutingModule } from 'src/app/app-routing/app-routing.module';
 
 describe('NavbarComponent', () => {
   let component: NavbarComponent;
@@ -14,7 +15,8 @@ describe('NavbarComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ NavbarComponent ],
       imports: [
-        MenubarModule
+        MenubarModule,
+        AppRoutingModule
       ]
     })
     .compileComponents();

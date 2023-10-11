@@ -2,6 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { Component } from '@angular/core';
 import { LandingPageComponent } from './Components/landing-page/landing-page.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
 @Component({
   selector: "app-navbar",
@@ -29,6 +30,9 @@ describe('AppComponent', () => {
         LandingPageComponent,
         mockCatalogueComponent
       ],
+      imports: [
+        AppRoutingModule
+      ]
     }).compileComponents();
   });
 
