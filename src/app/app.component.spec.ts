@@ -12,13 +12,22 @@ class NavbarMockComponent {
 }
 
 
+@Component({
+  selector: 'app-catalogue',
+  template: ''
+})
+export class mockCatalogueComponent {
+
+}
+
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
         AppComponent,
         NavbarMockComponent,
-        LandingPageComponent
+        LandingPageComponent,
+        mockCatalogueComponent
       ],
     }).compileComponents();
   });

@@ -11,7 +11,7 @@ export class NavbarComponent implements OnInit {
   items: MenuItem[] = [
     { label: 'Home', icon: 'pi pi-home' , routerLink: '/'},
     { label: 'About', icon: 'pi pi-info-circle'},
-    { label: 'Catalogue', icon: 'pi pi-shopping-cart' },
+    { label: 'Catalogue', icon: 'pi pi-shopping-cart', routerLink: '/catalogue' },
     { label: 'Contact', icon: 'pi pi-phone'}
   ];
 
