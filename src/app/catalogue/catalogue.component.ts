@@ -2,6 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { Bike } from '../models/bike.model';
 import { MenuItem } from 'primeng/api';
 import { BikeService } from '../services/bike.service';
+import { BookService } from '../services/book.service';
+import { DvdService } from '../services/dvd.service';
+import { ToyService } from '../services/toy.service';
+import { FoodService } from '../services/food.service';
+import { LaptopService } from '../services/laptop.service';
+
+// interface Country {
+//   name: string;
+//   code: string;
+// }
 
 @Component({
   selector: 'app-catalogue',
@@ -11,6 +21,8 @@ import { BikeService } from '../services/bike.service';
 export class CatalogueComponent implements OnInit {
 
   items: MenuItem[] = [];
+  selectedCountry: string = "";
+  code: string = "";
 
   ngOnInit() {
     this.items = [
@@ -21,6 +33,26 @@ export class CatalogueComponent implements OnInit {
         {label: 'Laptops', routerLink:'/laptop-catalogue'},
         {label: 'Toys', routerLink:'/toy-catalogue'}
       ];
+    }
+
+    constructor(private bikeService: BikeService, private laptopService: LaptopService,
+      private bookService: BookService, private dvdService: DvdService,
+      private foodService: FoodService, private toyService: ToyService){}
+
+    onDropdownChange() {
+      if(this.selectedCountry==='India')
+        this.code = 'IN';
+      else if(this.selectedCountry==='Ireland')
+        this.code = 'IE';
+      else
+        this.code = 'US-NC'
+      this.bikeService.processSelectedCountry(this.code);
+      this.bookService.processSelectedCountry(this.code);
+      this.dvdService.processSelectedCountry(this.code);
+      this.foodService.processSelectedCountry(this.code);
+      this.toyService.processSelectedCountry(this.code);
+      this.laptopService.processSelectedCountry(this.code);
+      
     }
 
 }

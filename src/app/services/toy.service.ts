@@ -9,11 +9,17 @@ import { HttpClient } from '@angular/common/http';
 export class ToyService {
   toys: Toy[]= [];
   private toyUrl="";
+  private url="";
 
   getToys(): Observable<Toy[]>{
-    return this.http.get<Toy[]>(this.toyUrl);
+    return this.http.get<Toy[]>(this.url);
   }
 
   constructor(private http: HttpClient) { }
+
+  processSelectedCountry(selectedCountry: string) {
+    this.url =  this.toyUrl + selectedCountry;
+    console.log(`Selected value is: ${this.url}`);
+  }
  
 }

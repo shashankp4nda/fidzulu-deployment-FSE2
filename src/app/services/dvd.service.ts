@@ -9,10 +9,16 @@ import { Observable } from 'rxjs';
 export class DvdService {
   dvd: Dvd[]= [];
   private dvdUrl="";
+  private url="";
 
   getDvds(): Observable<Dvd[]>{
    
-    return this.http.get<Dvd[]>(this.dvdUrl);
+    return this.http.get<Dvd[]>(this.url);
   }
   constructor(private http: HttpClient) { }
+
+  processSelectedCountry(selectedCountry: string) {
+    this.url =  this.dvdUrl + selectedCountry;
+    console.log(`Selected value is: ${this.url}`);
+  }
 }
