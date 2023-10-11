@@ -11,7 +11,6 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { DataViewModule} from 'primeng/dataview';
 import { RatingModule } from 'primeng/rating';
 
-import { ButtonModule } from 'primeng/button';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './Components/about/about.component';
 import {CarouselModule} from 'primeng/carousel';
@@ -25,6 +24,9 @@ import { DvdCatalogueComponent } from './dvd-catalogue/dvd-catalogue.component';
 import { FoodCatalogueComponent } from './food-catalogue/food-catalogue.component';
 import { LaptopCatalogueComponent } from './laptop-catalogue/laptop-catalogue.component';
 import { ToyCatalogueComponent } from './toy-catalogue/toy-catalogue.component';
+
+import { ButtonModule } from 'primeng/button';
+
 
 @NgModule({
   declarations: [
