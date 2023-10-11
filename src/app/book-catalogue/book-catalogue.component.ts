@@ -12,6 +12,7 @@ export class BookCatalogueComponent {
 
   public books: Book[] = [];
 
+
   constructor(private bookService: BookService){}
 
   getBooks(){

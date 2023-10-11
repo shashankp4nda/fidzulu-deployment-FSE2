@@ -9,10 +9,13 @@ import { Food } from '../models/food.model';
 export class FoodService {
 
   foods: Food[]= [];
-  private foodUrl="";
+  private foodUrl="http://localhost:3021/food/all/IN";
 
   getFoods(): Observable<Food[]>{
+    console.log("In good service function");
+    
     return this.http.get<Food[]>(this.foodUrl);
+    
   }
 
   constructor(private http: HttpClient) { }
