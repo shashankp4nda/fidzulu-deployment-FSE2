@@ -5,27 +5,23 @@
 h1{
     padding: 2%;
 }
-
-img{
-  width:100%
-}
-.card{
-    width: 70%;
-    height: 50%;
-    margin: auto;
-    padding: 5px;
-}
-.card-text { 
-    overflow-x: scroll;  
-}
-
-.card-text p {  
-    word-break: break-word;
+#container{
+    width:70%;
     margin: auto;
 }
-#background-pic{
-    position: absolute;
-    top:0;
-    left:0;
-    z-index: -1;
+#team-pic{
+  /* display: none; */
+  display: block;
+  width:60%;
+  height: 60%;
+  min-width: 50px;
+  margin: auto;
+}
+p{
+    margin:auto;
+}
+@media only screen and (max-width: 400px){
+    #team-pic{
+        display:none;
+    }
 }

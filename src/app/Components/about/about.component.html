@@ -1,21 +1,16 @@
 
 <section id = "list">
-    <br>
     <h1>Meet the brains behind this project!</h1>
-    <!-- //<img src="assets/flower.png" id="background-pic"> -->
-    <p-carousel [value]="items">
+    
+    <div id = container><p-carousel [value]="items">
         <ng-template let-items pTemplate="item">
-        <p-card header="{{items[0]}}" subheader="{{items[1]}}"  styleClass="p-card-shadow">
-            <p-splitter>
+            <p-card header="{{items[0]}}" subheader="{{items[1]}}"  styleClass="p-card-shadow">
                 <ng-template pTemplate>
-                    <img alt="Card" src="{{items[2]}}">
+                    <img alt="Card" src="{{items[2]}}" id="team-pic">
+                    <p>{{items[3]}}</p>
                 </ng-template>
-                <ng-template pTemplate>
-                    <div class = "card-text"><p>{{items[3]}}</p></div>       
-                </ng-template>
-            </p-splitter>
         </p-card>
     </ng-template >
-    </p-carousel>
+    </p-carousel></div>
     
 </section>
