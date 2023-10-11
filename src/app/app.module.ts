@@ -8,17 +8,11 @@ import { InputTextModule } from 'primeng/inputtext';
 import { CardModule } from 'primeng/card';
 import { LandingPageComponent } from './Components/landing-page/landing-page.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
-
 import { DataViewModule} from 'primeng/dataview';
 import { RatingModule } from 'primeng/rating';
-
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-
-
 import { ContactUsComponent } from './Components/contact-us/contact-us.component';
-
 import { SplitterModule } from 'primeng/splitter'
-
 import { CatalogueComponent } from './catalogue/catalogue.component';
 
 @NgModule({
