@@ -5,17 +5,22 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { MenubarModule } from 'primeng/menubar';
 import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
+import { CardModule } from 'primeng/card';
+import { LandingPageComponent } from './Components/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
     MenubarModule,
     FormsModule,
-    InputTextModule
+    InputTextModule,
+    CardModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

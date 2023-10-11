@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "primeng/resources/themes/saga-blue/theme.css";
 @import "node_modules/primeng/resources/primeng.min.css";
 @import "node_modules/primeicons/primeicons.css";
@@ -6,6 +7,13 @@
 * {
     margin: 0;
     padding: 0;
+=======
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@500&family=Poppins&display=swap');
+@import "node_modules/primeng/resources/themes/saga-blue/theme.css";
+@import "node_modules/primeng/resources/primeng.min.css";
+
+* {
+>>>>>>> 24e4adf89d9fd95b82464cbf7f4df857bb3f9634
     font-family: 'Poppins', sans-serif;
 }
 
@@ -13,9 +21,12 @@ h1 {
     font-family: 'Gabarito', cursive;
     font-size: 50px;
 }
+<<<<<<< HEAD
 
 
 
 
   
   
+=======
+>>>>>>> 24e4adf89d9fd95b82464cbf7f4df857bb3f9634
