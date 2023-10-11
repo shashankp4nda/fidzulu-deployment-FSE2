@@ -21,6 +21,15 @@ export class mockCatalogueComponent {
 
 }
 
+
+@Component({
+  selector: 'app-contact-us',
+  template: ''
+})
+export class MockContactUsComponent {
+
+}
+
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -28,7 +37,8 @@ describe('AppComponent', () => {
         AppComponent,
         NavbarMockComponent,
         LandingPageComponent,
-        mockCatalogueComponent
+        mockCatalogueComponent,
+        MockContactUsComponent
       ],
       imports: [
         AppRoutingModule
@@ -46,7 +56,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('fidzulu');
-  });
+  });*/
 
   // it('should render title', () => {
   //   const fixture = TestBed.createComponent(AppComponent);
@@ -54,4 +64,5 @@ describe('AppComponent', () => {
   //   const compiled = fixture.nativeElement as HTMLElement;
   //   expect(compiled.querySelector('app-landing-page')?.textContent).toContain('Hello World');
   // });
+
 });
