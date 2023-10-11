@@ -20,4 +20,9 @@ describe('CatalogueComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render a navbar', () => {
+    const navbarElement: HTMLElement = fixture.nativeElement;
+    expect(navbarElement.querySelector('.p-menubar')).toBeTruthy();
+  });
 });
