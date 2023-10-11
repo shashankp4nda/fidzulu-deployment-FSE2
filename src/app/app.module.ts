@@ -9,11 +9,17 @@ import { CardModule } from 'primeng/card';
 import { LandingPageComponent } from './Components/landing-page/landing-page.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
+import { DataViewModule} from 'primeng/dataview';
+import { RatingModule } from 'primeng/rating';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CatalogueComponent } from './catalogue/catalogue.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    CatalogueComponent
   ],
   imports: [
     BrowserModule,
@@ -21,9 +27,14 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     FormsModule,
     InputTextModule,
     CardModule,
-    AppRoutingModule
-    
+    AppRoutingModule,
+    DataViewModule,
+    RatingModule,
+    FormsModule,
+    MenubarModule,
+    HttpClientModule
   ],
+ 
   providers: [],
   bootstrap: [AppComponent]
 })
