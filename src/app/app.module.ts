@@ -8,37 +8,53 @@ import { InputTextModule } from 'primeng/inputtext';
 import { CardModule } from 'primeng/card';
 import { LandingPageComponent } from './Components/landing-page/landing-page.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
-
 import { DataViewModule} from 'primeng/dataview';
 import { RatingModule } from 'primeng/rating';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-
+import { AboutComponent } from './Components/about/about.component';
+import {CarouselModule} from 'primeng/carousel';
 
 import { ContactUsComponent } from './Components/contact-us/contact-us.component';
-
 import { SplitterModule } from 'primeng/splitter'
-
 import { CatalogueComponent } from './catalogue/catalogue.component';
+import { BikeCatalogueComponent } from './bike-catalogue/bike-catalogue.component';
+import { BookCatalogueComponent } from './book-catalogue/book-catalogue.component';
+import { DvdCatalogueComponent } from './dvd-catalogue/dvd-catalogue.component';
+import { FoodCatalogueComponent } from './food-catalogue/food-catalogue.component';
+import { LaptopCatalogueComponent } from './laptop-catalogue/laptop-catalogue.component';
+import { ToyCatalogueComponent } from './toy-catalogue/toy-catalogue.component';
+
+import { ButtonModule } from 'primeng/button';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    AboutComponent,
+    CatalogueComponent,
     ContactUsComponent,
     CatalogueComponent,
     LandingPageComponent,
-    NavbarComponent
+    NavbarComponent,
+    BikeCatalogueComponent,
+    BookCatalogueComponent,
+    DvdCatalogueComponent,
+    FoodCatalogueComponent,
+    LaptopCatalogueComponent,
+    ToyCatalogueComponent
   ],
   imports: [
     BrowserModule,
+    CardModule,
     SplitterModule,
-    FormsModule,
-    BrowserModule,
+    CarouselModule,
     DataViewModule,
     RatingModule,
     FormsModule,
     MenubarModule,
     HttpClientModule,
+    ButtonModule,
     InputTextModule,
     CardModule,
     AppRoutingModule

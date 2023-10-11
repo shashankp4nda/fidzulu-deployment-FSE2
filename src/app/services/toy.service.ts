@@ -10,7 +10,7 @@ export class ToyService {
   toys: Toy[]= [];
   private toyUrl="";
 
-  getLaptops(): Observable<Toy[]>{
+  getToys(): Observable<Toy[]>{
     return this.http.get<Toy[]>(this.toyUrl);
   }
 

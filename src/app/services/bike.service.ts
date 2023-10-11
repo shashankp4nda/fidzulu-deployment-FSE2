@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class BikeService {
 
   bikes: Bike[]= [];
-  private bikeUrl="";
+  private bikeUrl="http://localhost:3021/bikes/all/IN";
 
   getBikes(): Observable<Bike[]>{
     // return of(this.bikes);

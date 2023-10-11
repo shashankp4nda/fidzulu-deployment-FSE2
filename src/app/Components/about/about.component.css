@@ -1,0 +1,27 @@
+#list{
+    background-color: #FFD1DA;
+    height: 100%;
+}
+h1{
+    padding: 2%;
+}
+#container{
+    width:70%;
+    margin: auto;
+}
+#team-pic{
+  /* display: none; */
+  display: block;
+  width:60%;
+  height: 60%;
+  min-width: 50px;
+  margin: auto;
+}
+p{
+    margin:auto;
+}
+@media only screen and (max-width: 400px){
+    #team-pic{
+        display:none;
+    }
+}
