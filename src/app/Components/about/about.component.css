@@ -1,0 +1,31 @@
+#list{
+    background-color: #FFD1DA;
+    height: 100%;
+}
+h1{
+    padding: 2%;
+}
+
+img{
+  width:100%
+}
+.card{
+    width: 70%;
+    height: 50%;
+    margin: auto;
+    padding: 5px;
+}
+.card-text { 
+    overflow-x: scroll;  
+}
+
+.card-text p {  
+    word-break: break-word;
+    margin: auto;
+}
+#background-pic{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+}
