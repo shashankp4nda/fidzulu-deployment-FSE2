@@ -1,0 +1,16 @@
+
+<section id = "list">
+    <h1>Meet the brains behind this project!</h1>
+    
+    <div id = container><p-carousel [value]="items">
+        <ng-template let-items pTemplate="item">
+            <p-card header="{{items[0]}}" subheader="{{items[1]}}"  styleClass="p-card-shadow">
+                <ng-template pTemplate>
+                    <img alt="Card" src="{{items[2]}}" id="team-pic">
+                    <p>{{items[3]}}</p>
+                </ng-template>
+        </p-card>
+    </ng-template >
+    </p-carousel></div>
+    
+</section>

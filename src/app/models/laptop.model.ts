@@ -1,4 +1,4 @@
-export class Food{
+export class Laptop{
     constructor(
         public id: number,
         public product: string,

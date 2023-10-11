@@ -1,0 +1,39 @@
+  .logo-container {
+    max-width: 150px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 5px;
+  }
+
+  .main-navbar {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+ 
+  ::ng-deep .main-navbar .p-menubar  {
+    border: none;
+
+    
+  }
+
+  ::ng-deep .main-navbar .p-menubar .p-menubar-button {
+    margin-left: 80px;
+  }
+
+  
+   /*
+  ::ng-deep .main-navbar .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
+    color: black;
+  }
+
+  ::ng-deep .main-navbar .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-icon {
+    color: black;
+  }*/
