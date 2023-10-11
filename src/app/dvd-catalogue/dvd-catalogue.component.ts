@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Dvd } from '../models/dvd.model';
 import { DvdService } from '../services/dvd.service';
 
@@ -7,13 +7,16 @@ import { DvdService } from '../services/dvd.service';
   templateUrl: './dvd-catalogue.component.html',
   styleUrls: ['./dvd-catalogue.component.css']
 })
-export class DvdCatalogueComponent {
+export class DvdCatalogueComponent implements OnInit{
+  ngOnInit(): void {
+      this.getDvds;
+  }
 
   public dvds: Dvd[] = [];
 
   constructor(private dvdService: DvdService){}
 
-  getBooks(){
+  getDvds(){
     this.dvdService.getDvds().subscribe(data => this.dvds = data);
   }
 }
