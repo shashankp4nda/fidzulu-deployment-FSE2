@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FoodCatalogueComponent } from './food-catalogue.component';
 
 describe('FoodCatalogueComponent', () => {
+  let mockBookService:any = jasmine.createSpyObj('BookService',['getBooks']);
   let component: FoodCatalogueComponent;
   let fixture: ComponentFixture<FoodCatalogueComponent>;
 

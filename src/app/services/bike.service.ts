@@ -9,11 +9,16 @@ import { HttpClient } from '@angular/common/http';
 export class BikeService {
 
   bikes: Bike[]= [];
-  private bikeUrl="http://localhost:3021/bikes/all/IN";
-
-  getBikes(): Observable<Bike[]>{
-    // return of(this.bikes);
+  bikeUrl:string="http://localhost:3021/bikes/all/";
+  getBikes(filter:string): Observable<Bike[]>{
+    var regionUrl = this.bikeUrl + filter;
+    console.log(regionUrl);
     return this.http.get<Bike[]>(this.bikeUrl);
+  }
+
+  checkUrl(filter:string): void {
+    var regionUrl = this.bikeUrl + filter;
+    console.log(regionUrl);
   }
 
   constructor(private http: HttpClient) { }

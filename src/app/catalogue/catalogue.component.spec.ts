@@ -4,6 +4,8 @@ import { CatalogueComponent } from './catalogue.component';
 import { DataViewModule} from 'primeng/dataview';
 import { RatingModule } from 'primeng/rating';
 import { MenubarModule } from 'primeng/menubar';
+import { AppRoutingModule } from '../app-routing/app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 describe('CatalogueComponent', () => {
   let component: CatalogueComponent;
@@ -21,7 +23,9 @@ describe('CatalogueComponent', () => {
     imports: [
       DataViewModule,
       RatingModule,
-      MenubarModule
+      MenubarModule,
+      AppRoutingModule,
+      FormsModule
     ]
     })
     .compileComponents();

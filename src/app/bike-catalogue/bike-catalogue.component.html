@@ -1,6 +1,12 @@
 <app-catalogue>
 </app-catalogue>
+<Select (change)="this.getUrl(this.filter)" [(ngModel)]= "filter" name="Filter"  ngDefaultControl>
+    <option value="IN">India</option>
+    <option value="US-NC">USA</option>
+    <option value="IE">Ireland</option>
+</Select>
 
+<div (onclick)="this.getUrl(this.filter)">{{this.filter}}</div>
 <div class="card" >
     <p-dataView #dv [value]="bikes" >
         <ng-template let-bike pTemplate="listItem">
