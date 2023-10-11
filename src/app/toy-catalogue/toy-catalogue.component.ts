@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Toy } from '../models/toy.model';
 import { ToyService } from '../services/toy.service';
 
@@ -7,13 +7,17 @@ import { ToyService } from '../services/toy.service';
   templateUrl: './toy-catalogue.component.html',
   styleUrls: ['./toy-catalogue.component.css']
 })
-export class ToyCatalogueComponent {
+export class ToyCatalogueComponent implements OnInit{
+
+  ngOnInit(): void {
+    this.getToys();
+  }
 
   public toys: Toy[] = [];
 
   constructor(private toyService: ToyService){}
 
-  getBooks(){
+  getToys(){
     this.toyService.getToys().subscribe(data => this.toys = data);
   }
 }
