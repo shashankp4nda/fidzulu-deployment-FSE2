@@ -1,0 +1,65 @@
+.landing-wrapper { 
+    background-color: #FFF0F5;
+}
+.heading-card {
+    display: flex;
+    margin: 20px auto;
+    max-width: 90%;
+    background-color: #FFD1DA;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 100%;
+    flex-direction: row;
+    color: #8a4445;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+#landing-info-heading {
+    padding: 30px;
+}
+
+#catalogue-desc {
+}
+
+#things-img {
+    margin-left: 25%;
+    width: 50%;
+}
+
+#catalogue-desc h3 {
+    width: 60%;
+    text-align: justify;
+}
+
+#shopnow {
+    background-color: #8a4445;
+    padding: 5px;
+    color: white;
+    text-shadow: 1px 1px 0 black;
+    font-size: large;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+    left: 50%;
+}
+
+#phone-bg {
+    background-image: url("src\assets\phone.png");
+    background-repeat: no-repeat;
+    background-size: 140%;
+    background-position: right 80%;
+}
+
+.col {
+    width: 50%;
+    flex-direction: column;
+}
+
+.heading-card p {
+    width: 100%;
+    text-align: justify;
+}
