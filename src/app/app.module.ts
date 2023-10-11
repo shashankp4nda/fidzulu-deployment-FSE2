@@ -14,6 +14,9 @@ import { SplitterModule } from 'primeng/splitter'
 
 import { CatalogueComponent } from './catalogue/catalogue.component';
 
+import { ButtonModule } from 'primeng/button';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +32,8 @@ import { CatalogueComponent } from './catalogue/catalogue.component';
     RatingModule,
     FormsModule,
     MenubarModule,
-    HttpClientModule
+    HttpClientModule,
+    ButtonModule
 
   ],
   providers: [],
