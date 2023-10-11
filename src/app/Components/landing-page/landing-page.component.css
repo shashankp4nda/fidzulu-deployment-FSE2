@@ -63,3 +63,32 @@
     width: 100%;
     text-align: justify;
 }
+
+@media (max-width: 1100px) {
+    #phone-bg {
+        display: none;
+    }
+    #landing-info-heading {
+        width: 100%;
+    }
+    #extra-info {
+        display: none;
+    }
+    #things-img-holder {
+        display: none;
+    }
+    #catalogue-desc {
+        width: 100%;
+    }
+    #catalogue-desc h3 {
+        margin: 10px auto;
+        text-align: justify;
+        width: 90%;
+    }
+}
+
+@media (max-width: 1300px) {
+    #phone-bg {
+        background-size: 160%;
+    }
+}
