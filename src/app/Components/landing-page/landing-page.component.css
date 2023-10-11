@@ -13,9 +13,26 @@
     color: #8a4445;
 }
 
+.content {
+    display: flex;
+    flex-direction: row;
+}
 
 #landing-info-heading {
     padding: 30px;
+}
+
+#catalogue-desc {
+}
+
+#things-img {
+    margin-left: 25%;
+    width: 50%;
+}
+
+#catalogue-desc h3 {
+    width: 60%;
+    text-align: justify;
 }
 
 #shopnow {
