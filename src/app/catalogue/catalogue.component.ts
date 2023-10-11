@@ -9,6 +9,14 @@ import { BikeService } from '../services/bike.service';
   styleUrls: ['./catalogue.component.css']
 })
 export class CatalogueComponent implements OnInit {
+
+  displayBikes: boolean = false;
+  displayBooks: boolean = false;
+  displayDvds: boolean = false;
+  displayFoods: boolean = false;
+  displayLaptops: boolean = false;
+  displayToys: boolean = false;
+
   items: MenuItem[] = [];
   public bikes: Bike[] = [];
 
@@ -16,12 +24,12 @@ export class CatalogueComponent implements OnInit {
 
   ngOnInit() {
     this.items = [
-        {label: 'Bikes'},
-        {label: 'Books'},
-        {label: 'DVDs'},
-        {label: 'Food'},
-        {label: 'Laptops'},
-        {label: 'Toys'}
+        {label: 'Bikes', routerLink:''},
+        {label: 'Books', routerLink:''},
+        {label: 'DVDs', routerLink:''},
+        {label: 'Food', routerLink:''},
+        {label: 'Laptops', routerLink:''},
+        {label: 'Toys', routerLink:''}
       ];
     }
 
@@ -44,7 +52,7 @@ export class CatalogueComponent implements OnInit {
   //   }
   // ];
 
-  getBikes(){
-    this.bikeService.getBikes().subscribe(data => this.bikes = data);
-  }
+  // getBikes(){
+  //   this.bikeService.getBikes().subscribe(data => this.bikes = data);
+  // }
 }

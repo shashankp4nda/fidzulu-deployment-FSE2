@@ -1,33 +1,24 @@
-<!-- <p>catalogue works!</p> -->
-<div class="card">
-    <p-menubar [model]="items"></p-menubar>
-    <!-- <nav>
-        <p-button label="Bikes"></p-button>&nbsp;
-        <p-button label="Books"></p-button>
-    </nav> -->   
-</div>
-
 <div class="card" >
-    <p-dataView #dv [value]="bikes" >
-        <ng-template let-bike pTemplate="listItem">
+    <p-dataView #dv [value]="books" >
+        <ng-template let-book pTemplate="listItem">
             <div class="col-8">
                 <div class="flex flex-column xl:flex-row xl:align-items-center p-4 gap-4">
-                    <div class="text-2xl font-bold text-900">{{ bike.id }}</div>
+                    <div class="text-2xl font-bold text-900">{{ book.id }}</div>
                     <div class="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-center flex-1 gap-4">
                         <div class="flex flex-column align-items-center sm:align-items-start gap-3">
                             <!-- <div class="text-2xl font-bold text-900">{{ bike.id }}</div> -->
                             <!-- <p-rating [(ngModel)]="bike.name" [readonly]="true" [cancel]="false"></p-rating> -->
                             <div class="flex align-items-center gap-3">
                                 <span class="flex align-items-center gap-2">
-                                    <span class="font-semibold">{{ bike.name }}</span>
+                                    <span class="font-semibold">{{ book.name }}</span>
                                 </span>
                             </div>
                             <div class="card flex justify-content-center">
-                                <p-rating [(ngModel)]="bike.rating" [readonly]="true" [cancel]="false"></p-rating>
+                                <p-rating [(ngModel)]="book.rating" [readonly]="true" [cancel]="false"></p-rating>
                             </div>
                         </div>
                         <div class="flex sm:flex-column align-items-center sm:align-items-end gap-3 sm:gap-2">
-                            <span class="text-2xl font-semibold">{{'$'+ bike.price }}</span>
+                            <span class="text-2xl font-semibold">{{'$'+ book.price }}</span>
                         </div>
                     </div>
                 </div>
