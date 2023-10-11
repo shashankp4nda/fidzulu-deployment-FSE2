@@ -1,11 +1,21 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { Component } from '@angular/core';
+
+@Component({
+  selector: "app-navbar",
+  template: ''
+})
+
+class NavbarMockComponent {
+}
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        NavbarMockComponent
       ],
     }).compileComponents();
   });
