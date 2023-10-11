@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ToyService {
   toys: Toy[]= [];
-  private toyUrl="";
+  private toyUrl="http://localhost:3021/toys/all/IN";
 
   getToys(): Observable<Toy[]>{
     return this.http.get<Toy[]>(this.toyUrl);
