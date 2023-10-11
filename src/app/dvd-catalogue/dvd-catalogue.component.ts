@@ -14,6 +14,6 @@ export class DvdCatalogueComponent {
   constructor(private dvdService: DvdService){}
 
   getBooks(){
-    this.dvdService.getdvds().subscribe(data => this.dvds = data);
+    this.dvdService.getDvds().subscribe(data => this.dvds = data);
   }
 }

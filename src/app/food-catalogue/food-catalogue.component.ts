@@ -14,6 +14,6 @@ export class FoodCatalogueComponent {
   constructor(private foodService: FoodService){}
 
   getFoods(){
-    this.foodService.getfoods().subscribe(data => this.foods = data);
+    this.foodService.getFoods().subscribe(data => this.foods = data);
   }
 }
