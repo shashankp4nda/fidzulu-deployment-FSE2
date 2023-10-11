@@ -9,7 +9,7 @@ import { DvdService } from '../services/dvd.service';
 })
 export class DvdCatalogueComponent implements OnInit{
   ngOnInit(): void {
-      this.getDvds;
+      this.getDvds();
   }
 
   public dvds: Dvd[] = [];
