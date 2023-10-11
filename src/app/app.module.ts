@@ -26,7 +26,7 @@ import { LaptopCatalogueComponent } from './laptop-catalogue/laptop-catalogue.co
 import { ToyCatalogueComponent } from './toy-catalogue/toy-catalogue.component';
 
 import { ButtonModule } from 'primeng/button';
-import { FilterComponent } from './filter/filter.component';
+
 
 
 @NgModule({
@@ -44,7 +44,7 @@ import { FilterComponent } from './filter/filter.component';
     FoodCatalogueComponent,
     LaptopCatalogueComponent,
     ToyCatalogueComponent,
-    FilterComponent
+   
   ],
   imports: [
     BrowserModule,

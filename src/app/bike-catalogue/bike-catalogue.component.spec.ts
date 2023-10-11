@@ -15,24 +15,7 @@ describe('BikeCatalogueComponent', () => {
   let mockBikeService:any = jasmine.createSpyObj('BikeService',['getBikes']);
   let component: BikeCatalogueComponent;
   let fixture: ComponentFixture<BikeCatalogueComponent>;
-  const testBikes: Bike[] = [
-    {
-      id: 1234,
-      name: "Mamba Sport Bike",
-      brand: "Mamba Bikes",
-      color: "black",
-      price: 75.88,
-      rating: 5
-    },
-    {
-      id: 1235,
-      name: "DJ Fat Bike 500W",
-      brand: "DJ Bikes",
-      color: "grey",
-      price: 1599.86,
-      rating: 3
-    }
-  ];
+  const testBikes: Bike[] = [];
   mockBikeService.getBikes.and.returnValue(of(testBikes));
   beforeEach(async () => {
     await TestBed.configureTestingModule({

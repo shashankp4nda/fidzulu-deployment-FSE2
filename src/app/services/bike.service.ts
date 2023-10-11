@@ -10,15 +10,9 @@ export class BikeService {
 
   bikes: Bike[]= [];
   bikeUrl:string="http://localhost:3021/bikes/all/";
-  getBikes(filter:string): Observable<Bike[]>{
-    var regionUrl = this.bikeUrl + filter;
-    console.log(regionUrl);
-    return this.http.get<Bike[]>(this.bikeUrl);
-  }
 
-  checkUrl(filter:string): void {
-    var regionUrl = this.bikeUrl + filter;
-    console.log(regionUrl);
+  getBikes(): Observable<Bike[]>{
+    return this.http.get<Bike[]>(this.bikeUrl);
   }
 
   constructor(private http: HttpClient) { }

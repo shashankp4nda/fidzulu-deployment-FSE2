@@ -5,12 +5,17 @@ import { DataViewModule } from 'primeng/dataview';
 import { RatingModule } from 'primeng/rating';
 import { MenubarModule } from 'primeng/menubar';
 import { CatalogueComponent } from '../catalogue/catalogue.component';
+import { Book } from '../models/book.model';
+import { of } from 'rxjs';
+import { AppRoutingModule } from '../app-routing/app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 describe('BookCatalogueComponent', () => {
   let mockBookService:any = jasmine.createSpyObj('BookService',['getBooks']);
   let component: BookCatalogueComponent;
   let fixture: ComponentFixture<BookCatalogueComponent>;
-
+  const testBooks: Book[] = [];
+  mockBookService.getBooks.and.returnValue(of(testBooks));
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ BookCatalogueComponent, CatalogueComponent ],
@@ -22,7 +27,9 @@ describe('BookCatalogueComponent', () => {
     imports: [
       DataViewModule,
       RatingModule,
-      MenubarModule
+      MenubarModule,
+      AppRoutingModule,
+      FormsModule
     ]
     })
     .compileComponents();

@@ -10,8 +10,7 @@ import { BikeService } from '../services/bike.service';
 export class BikeCatalogueComponent implements OnInit{
 
   ngOnInit(): void {
-    //this.getBikes();
-    this.getUrl(this.filter);
+    this.getBikes();
   }
 
   public bikes: Bike[] = [];
@@ -39,13 +38,9 @@ export class BikeCatalogueComponent implements OnInit{
   //   }
   // ];
 
-  filter: string = "";
-  /*getBikes(){
-    this.bikeService.getBikes(this.filter).subscribe(data => this.bikes = data);
-  }
-*/
-  getUrl(filter:string) {
-    this.bikeService.checkUrl(filter);
+  
+  getBikes(){
+    this.bikeService.getBikes().subscribe(data => this.bikes = data);
   }
 
 }
