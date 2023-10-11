@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { Book } from '../models/book.model';
 import { BookService } from '../services/book.service';
@@ -8,10 +8,12 @@ import { BookService } from '../services/book.service';
   templateUrl: './book-catalogue.component.html',
   styleUrls: ['./book-catalogue.component.css']
 })
-export class BookCatalogueComponent {
+export class BookCatalogueComponent implements OnInit{
 
   public books: Book[] = [];
-
+  ngOnInit(): void {
+      this.getBooks();
+  }
 
   constructor(private bookService: BookService){}
 
