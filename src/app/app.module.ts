@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { CardModule } from 'primeng/card';
 import { LandingPageComponent } from './Components/landing-page/landing-page.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LandingPageComponent } from './Components/landing-page/landing-page.com
     MenubarModule,
     FormsModule,
     InputTextModule,
-    CardModule
+    CardModule,
+    AppRoutingModule
     
   ],
   providers: [],

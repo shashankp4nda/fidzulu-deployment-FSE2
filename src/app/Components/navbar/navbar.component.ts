@@ -9,7 +9,7 @@ import { MenuItem } from 'primeng/api';
 export class NavbarComponent implements OnInit {
   value:string = "";
   items: MenuItem[] = [
-    { label: 'Home', icon: 'pi pi-home' },
+    { label: 'Home', icon: 'pi pi-home' , routerLink: '/'},
     { label: 'About', icon: 'pi pi-info-circle'},
     { label: 'Catalogue', icon: 'pi pi-shopping-cart' },
     { label: 'Contact', icon: 'pi pi-phone'}
