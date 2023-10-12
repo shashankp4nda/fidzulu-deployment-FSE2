@@ -49,12 +49,12 @@ describe('ToyService', () => {
  
 
   it('should update the URL based on selected country', () => {
-    const selectedCountry = 'USA';
+    const selectedCountry = 'IN';
     const expectedUrl = service.toyUrl + selectedCountry;
 
  
 
-    service.processSelectedCountry(selectedCountry);
+    service.processSelectedCountry();
 
  
 

@@ -33,8 +33,8 @@ export class LaptopService {
 
   constructor(private http: HttpClient, private dropDownService: DropDownService) { }
 
-  // processSelectedCountry(selectedCountry: string) {
-  //   this.url =  this.laptopUrl + selectedCountry;
-  //   console.log(`Selected value is: ${this.url}`);
-  // }
+  processSelectedCountry() {
+    this.url =  this.laptopUrl + this.dropDownService.getSelectedValue();
+    console.log(`Selected value is: ${this.url}`);
+  }
 }

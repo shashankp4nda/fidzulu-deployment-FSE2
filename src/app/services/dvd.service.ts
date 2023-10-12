@@ -31,8 +31,8 @@ export class DvdService {
 
   constructor(private http: HttpClient, private dropDownService: DropDownService) { }
 
-  /* processSelectedCountry(selectedCountry: string) {
-    this.url =  this.dvdUrl + selectedCountry;
+  processSelectedCountry() {
+    this.url =  this.dvdUrl + this.dropDownService.getSelectedValue();
     console.log(`Selected value is: ${this.url}`);
-  } */
+  }
 }

@@ -32,9 +32,9 @@ export class ToyService {
 
   constructor(private http: HttpClient, private dropDownService: DropDownService) { }
 
-  // processSelectedCountry(selectedCountry: string) {
-  //   this.url =  this.toyUrl + selectedCountry;
-  //   console.log(`Selected value is: ${this.url}`);
-  // }
+  processSelectedCountry() {
+    this.url =  this.toyUrl + this.dropDownService.getSelectedValue();
+    console.log(`Selected value is: ${this.url}`);
+  }
  
 }
