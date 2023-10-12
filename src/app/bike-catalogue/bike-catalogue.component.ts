@@ -43,4 +43,5 @@ export class BikeCatalogueComponent implements OnInit{
     this.bikeService.getBikes().subscribe(data => this.bikes = data);
   }
 
+  
 }
