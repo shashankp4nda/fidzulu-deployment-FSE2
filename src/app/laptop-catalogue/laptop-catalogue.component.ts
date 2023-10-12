@@ -8,7 +8,7 @@ import { LaptopService } from '../services/laptop.service';
   styleUrls: ['./laptop-catalogue.component.css']
 })
 export class LaptopCatalogueComponent implements OnInit{
-
+  errorMessage: string = "";
   public laptops: Laptop[] = [];
   ngOnInit(): void {
       this.getLaptops();
@@ -16,6 +16,12 @@ export class LaptopCatalogueComponent implements OnInit{
   constructor(private laptopService: LaptopService){}
 
   getLaptops(){
-    this.laptopService.getLaptops().subscribe(data => this.laptops = data);
+    // this.laptopService.getLaptops().subscribe(data => this.laptops = data);
+    this.laptopService.getLaptops().subscribe({next: (data) => {
+        this.laptops = data; 
+        this.errorMessage = '';
+      }, 
+      error: (e) => this.errorMessage = e
+    })
   }
 }

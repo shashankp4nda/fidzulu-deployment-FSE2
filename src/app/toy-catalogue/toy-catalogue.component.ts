@@ -14,10 +14,18 @@ export class ToyCatalogueComponent implements OnInit{
   }
 
   public toys: Toy[] = [];
+  errorMessage: string = "";
 
   constructor(private toyService: ToyService){}
 
   getToys(){
-    this.toyService.getToys().subscribe(data => this.toys = data);
+    this.toyService.getToys().subscribe({ next : (data) => 
+      { 
+        this.toys = data; 
+        this.errorMessage = '';
+      }, 
+        error: (e) => this.errorMessage = e },
+    );
+    console.log(this.errorMessage);
   }
 }

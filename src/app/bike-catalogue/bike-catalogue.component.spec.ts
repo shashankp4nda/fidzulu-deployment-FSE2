@@ -10,13 +10,24 @@ import { Bike } from '../models/bike.model';
 import { of } from 'rxjs';
 import { AppRoutingModule } from '../app-routing/app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('BikeCatalogueComponent', () => {
   let mockBikeService:any = jasmine.createSpyObj('BikeService',['getBikes']);
   let component: BikeCatalogueComponent;
   let fixture: ComponentFixture<BikeCatalogueComponent>;
-  const testBikes: Bike[] = [];
-  mockBikeService.getBikes.and.returnValue(of(testBikes));
+  const mockBikes: Bike[] = [
+    {
+      id: 1234,
+      name: 'Mamba Sport Bike',
+      url: "anything",
+      brand: "adidas",
+      color: "black",
+      price: 400.5,
+      rating: 4.5
+    },
+  ];
+  mockBikeService.getBikes.and.returnValue(of(mockBikes));
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ BikeCatalogueComponent, CatalogueComponent ],
@@ -30,7 +41,8 @@ describe('BikeCatalogueComponent', () => {
       RatingModule,
       MenubarModule,
       AppRoutingModule,
-      FormsModule
+      FormsModule,
+      HttpClientModule
     ]
     })
     .compileComponents();
@@ -42,5 +54,11 @@ describe('BikeCatalogueComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should get bikes from the service', () => {
+    component.ngOnInit();
+    fixture.detectChanges();
+    expect(component.bikes).toEqual(mockBikes);
   });
 });

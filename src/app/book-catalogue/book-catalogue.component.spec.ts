@@ -9,13 +9,25 @@ import { Book } from '../models/book.model';
 import { of } from 'rxjs';
 import { AppRoutingModule } from '../app-routing/app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('BookCatalogueComponent', () => {
   let mockBookService:any = jasmine.createSpyObj('BookService',['getBooks']);
   let component: BookCatalogueComponent;
   let fixture: ComponentFixture<BookCatalogueComponent>;
-  const testBooks: Book[] = [];
-  mockBookService.getBooks.and.returnValue(of(testBooks));
+  const mockBooks: Book[] = [
+    {
+      id: 1,
+      title: "Da Vinci Code",
+      url: "random-url",
+      author: "Dan Brown",
+      price: 440.5,
+      isbn: "123456h",
+      publisher: "mega studio",
+      rating: 5
+    }
+  ];
+  mockBookService.getBooks.and.returnValue(of(mockBooks));
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ BookCatalogueComponent, CatalogueComponent ],
@@ -29,7 +41,8 @@ describe('BookCatalogueComponent', () => {
       RatingModule,
       MenubarModule,
       AppRoutingModule,
-      FormsModule
+      FormsModule,
+      HttpClientModule
     ]
     })
     .compileComponents();
@@ -41,5 +54,11 @@ describe('BookCatalogueComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should get books from the service', () => {
+    component.ngOnInit();
+    fixture.detectChanges();
+    expect(component.books).toEqual(mockBooks);
   });
 });
