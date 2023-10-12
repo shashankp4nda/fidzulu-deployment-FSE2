@@ -11,6 +11,7 @@ import { BookService } from '../services/book.service';
 export class BookCatalogueComponent implements OnInit{
 
   public books: Book[] = [];
+  errorMessage: string = "";
   ngOnInit(): void {
       this.getBooks();
   }
@@ -18,6 +19,12 @@ export class BookCatalogueComponent implements OnInit{
   constructor(private bookService: BookService){}
 
   getBooks(){
-    this.bookService.getBooks().subscribe(data => this.books = data);
+    this.bookService.getBooks().subscribe({ next : (data) => 
+      { 
+        this.books = data; 
+        this.errorMessage = '';
+      }, 
+        error: (e) => this.errorMessage = e });
+    console.log(this.errorMessage);
   }
 }

@@ -14,7 +14,7 @@ export class BikeCatalogueComponent implements OnInit{
   }
 
   public bikes: Bike[] = [];
-
+  errorMessage: string = "";
   constructor(private bikeService: BikeService){}
 
   // bikes: Bike[] = [
@@ -40,7 +40,13 @@ export class BikeCatalogueComponent implements OnInit{
 
   
   getBikes(){
-    this.bikeService.getBikes().subscribe(data => this.bikes = data);
+    this.bikeService.getBikes().subscribe({ next : (data) => 
+      { 
+        this.bikes = data; 
+        this.errorMessage = '';
+      }, 
+        error: (e) => this.errorMessage = e });
+      console.log(this.errorMessage);
   }
 
   
