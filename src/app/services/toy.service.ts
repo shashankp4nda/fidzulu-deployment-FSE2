@@ -8,8 +8,8 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 })
 export class ToyService {
   toys: Toy[]= [];
-  private toyUrl="";
-  private url="";
+  public toyUrl="";
+  public url="";
 
   getToys(): Observable<Toy[]>{
     return this.http.get<Toy[]>(this.url).pipe(catchError(this.handleError));
