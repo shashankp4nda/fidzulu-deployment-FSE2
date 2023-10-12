@@ -8,8 +8,8 @@ import { Observable, catchError, throwError } from 'rxjs';
 })
 export class DvdService {
   dvd: Dvd[]= [];
-  private dvdUrl="";
-  private url="";
+  public dvdUrl="";
+  public url="";
 
   getDvds(): Observable<Dvd[]>{
     return this.http.get<Dvd[]>(this.url).pipe(catchError(this.handleError));

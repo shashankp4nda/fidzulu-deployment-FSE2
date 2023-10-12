@@ -8,8 +8,8 @@ import { Laptop } from '../models/laptop.model';
 export class LaptopService {
 
   laptops: Laptop[]= [];
-  private laptopUrl="";
-  private url="";
+  public laptopUrl="";
+  public url="";
 
   getLaptops(): Observable<Laptop[]>{
     return this.http.get<Laptop[]>(this.url).pipe(catchError(this.handleError));
