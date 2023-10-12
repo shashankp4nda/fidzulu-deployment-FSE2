@@ -9,13 +9,13 @@ import { DropDownService } from './drop-down.service';
 })
 export class ToyService {
   toys: Toy[]= [];
-  public toyUrl="http://54.90.86.99:3021/toys/all/IN";
+  public toyUrl="http://54.90.86.99:3021/toys/all/";
   public url="";
 
   getToys(): Observable<Toy[]>{
     this.url =  this.toyUrl + this.dropDownService.getSelectedValue();
     console.log(this.url);
-    return this.http.get<Toy[]>(this.toyUrl).pipe(catchError(this.handleError));
+    return this.http.get<Toy[]>(this.url).pipe(catchError(this.handleError));
   }
 
   handleError(response: HttpErrorResponse) { 
@@ -32,9 +32,9 @@ export class ToyService {
 
   constructor(private http: HttpClient, private dropDownService: DropDownService) { }
 
-  // processSelectedCountry(selectedCountry: string) {
-  //   this.url =  this.toyUrl + selectedCountry;
-  //   console.log(`Selected value is: ${this.url}`);
-  // }
+  processSelectedCountry() {
+    this.url =  this.toyUrl + this.dropDownService.getSelectedValue();
+    console.log(`Selected value is: ${this.url}`);
+  }
  
 }

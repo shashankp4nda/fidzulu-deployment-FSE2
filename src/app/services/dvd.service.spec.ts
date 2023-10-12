@@ -42,10 +42,10 @@ describe('DvdService', () => {
   });
 
   it('should update the URL based on selected country', () => {
-    const selectedCountry = 'USA';
+    const selectedCountry = 'IN';
     const expectedUrl = dvdService.dvdUrl + selectedCountry;
 
-    dvdService.processSelectedCountry(selectedCountry);
+    dvdService.processSelectedCountry();
 
     expect(dvdService.url).toBe(expectedUrl);
   });

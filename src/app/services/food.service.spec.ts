@@ -42,10 +42,10 @@ describe('FoodService', () => {
   });
 
   it('should update the URL based on selected country', () => {
-    const selectedCountry = 'USA';
+    const selectedCountry = 'IN';
     const expectedUrl = foodService.foodUrl + selectedCountry;
 
-    foodService.processSelectedCountry(selectedCountry);
+    foodService.processSelectedCountry();
 
     expect(foodService.url).toBe(expectedUrl);
   });

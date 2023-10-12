@@ -42,10 +42,10 @@ describe('LaptopService', () => {
   });
 
   it('should update the URL based on selected country', () => {
-    const selectedCountry = 'USA';
+    const selectedCountry = 'IN';
     const expectedUrl = laptopService.laptopUrl + selectedCountry;
 
-    laptopService.processSelectedCountry(selectedCountry);
+    laptopService.processSelectedCountry();
 
     expect(laptopService.url).toBe(expectedUrl);
   });

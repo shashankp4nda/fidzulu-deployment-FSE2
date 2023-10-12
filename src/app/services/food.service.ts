@@ -32,8 +32,8 @@ export class FoodService {
 
   constructor(private http: HttpClient, private dropDownService: DropDownService) { }
 
-  processSelectedCountry(selectedCountry: string) {
-    this.url =  this.foodUrl + selectedCountry;
+  processSelectedCountry() {
+    this.url =  this.foodUrl + this.dropDownService.getSelectedValue();
     console.log(`Selected value is: ${this.url}`);
   }
 }
