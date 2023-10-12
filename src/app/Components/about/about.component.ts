@@ -19,7 +19,7 @@ export class AboutComponent implements OnInit{
  
   items: any = [    
     ["Front-End team", "Angular", "assets/front.jpeg", "As a member of the front end team, I can confirm that the front end team is the best", ""],
-    ["Middle-Tier team", "NodeJS", "assets/middle.jpeg", "our middle tier team is amazing", ],
+    ["Middle-Tier team", "NodeJS", "assets/middle.jpeg", "our middle tier team is amazing", ""],
     ["Back-End team", "SpringBoot", "https://www.webdesignlane.com/assets/images/av/03.jpg", "and guess what? our backend team is pretty good too", ""]
   ];
 
