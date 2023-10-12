@@ -30,6 +30,50 @@ export class MockContactUsComponent {
 
 }
 
+@Component({
+  selector: 'app-dvd-catalogue',
+  template: ''
+})
+export class MockDvdCatalogueComponent {
+
+}
+
+@Component({
+  selector: 'app-food-catalogue',
+  template: ''
+})
+export class MockFoodCatalogueComponent {
+
+}
+
+@Component({
+  selector: 'app-toy-catalogue',
+  template: ''
+})
+export class MockToyCatalogueComponent {
+
+}
+@Component({
+  selector: 'app-bike-catalogue',
+  template: ''
+})
+export class MockBikeCatalogueComponent {
+
+}
+@Component({
+  selector: 'app-laptop-catalogue',
+  template: ''
+})
+export class MockLaptopCatalogueComponent {
+
+}
+@Component({
+  selector: 'app-book-catalogue',
+  template: ''
+})
+export class MockBookCatalogueComponent {
+
+}
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -38,7 +82,14 @@ describe('AppComponent', () => {
         NavbarMockComponent,
         LandingPageComponent,
         mockCatalogueComponent,
-        MockContactUsComponent
+        MockContactUsComponent,
+        MockDvdCatalogueComponent,
+        MockFoodCatalogueComponent,
+        MockLaptopCatalogueComponent,
+        MockBookCatalogueComponent,
+        MockBikeCatalogueComponent,
+        MockToyCatalogueComponent
+
       ],
       imports: [
         AppRoutingModule

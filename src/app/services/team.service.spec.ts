@@ -2,13 +2,18 @@ import { TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { HttpTestingController, HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { TeamService } from './team.service';
+<<<<<<< HEAD
 import { inject } from '@angular/core/testing';
 import { Team } from '../models/team.model';
 import { HttpErrorResponse } from '@angular/common/http';
+=======
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+>>>>>>> 3509b21c7031cfaa6d7a18ca9d22c1345478c36f
 
 describe('TeamService', () => {
   let service: TeamService;
   let httpTestingController: HttpTestingController;
+<<<<<<< HEAD
 
   let testBikeTeam: Team[] = [
   {
@@ -33,6 +38,13 @@ describe('TeamService', () => {
       ]
     });
     httpTestingController = TestBed.inject(HttpTestingController);
+=======
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({imports: [
+      HttpClientTestingModule
+    ]});
+>>>>>>> 3509b21c7031cfaa6d7a18ca9d22c1345478c36f
     service = TestBed.inject(TeamService);
   });
 

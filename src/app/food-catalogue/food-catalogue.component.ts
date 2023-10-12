@@ -18,5 +18,6 @@ export class FoodCatalogueComponent implements OnInit {
 
   getFoods(){
     this.foodService.getFoods().subscribe(data => this.foods = data);
+    
   }
 }

@@ -1,19 +1,40 @@
 import { Injectable } from '@angular/core';
 import { Toy } from '../models/toy.model';
-import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { Observable, catchError, throwError } from 'rxjs';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { DropDownService } from './drop-down.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ToyService {
   toys: Toy[]= [];
-  private toyUrl="";
+  public toyUrl="http://54.90.86.99:3021/toys/all/";
+  public url="";
 
   getToys(): Observable<Toy[]>{
-    return this.http.get<Toy[]>(this.toyUrl);
+    this.url =  this.toyUrl + this.dropDownService.getSelectedValue();
+    console.log(this.url);
+    return this.http.get<Toy[]>(this.toyUrl).pipe(catchError(this.handleError));
   }
 
-  constructor(private http: HttpClient) { }
+  handleError(response: HttpErrorResponse) { 
+    if (response.error instanceof ProgressEvent) { 
+      console.error('A client-side or network error occurred; ' + 
+      `${response.message} ${response.status} ${response.statusText}`); 
+    } 
+    else { 
+      console.error(`Backend returned code ${response.status}, ` + 
+      `body was: ${JSON.stringify(response.error)}`); 
+    } 
+    return throwError( () => 'Unable to contact service; please try again later.'); 
+  }
+
+  constructor(private http: HttpClient, private dropDownService: DropDownService) { }
+
+  // processSelectedCountry(selectedCountry: string) {
+  //   this.url =  this.toyUrl + selectedCountry;
+  //   console.log(`Selected value is: ${this.url}`);
+  // }
  
 }

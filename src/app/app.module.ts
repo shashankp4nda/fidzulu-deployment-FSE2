@@ -10,10 +10,12 @@ import { LandingPageComponent } from './Components/landing-page/landing-page.com
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { DataViewModule} from 'primeng/dataview';
 import { RatingModule } from 'primeng/rating';
+import { DropdownModule } from 'primeng/dropdown';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './Components/about/about.component';
 import {CarouselModule} from 'primeng/carousel';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ContactUsComponent } from './Components/contact-us/contact-us.component';
 import { SplitterModule } from 'primeng/splitter'
@@ -26,6 +28,7 @@ import { LaptopCatalogueComponent } from './laptop-catalogue/laptop-catalogue.co
 import { ToyCatalogueComponent } from './toy-catalogue/toy-catalogue.component';
 
 import { ButtonModule } from 'primeng/button';
+
 
 
 @NgModule({
@@ -42,7 +45,8 @@ import { ButtonModule } from 'primeng/button';
     DvdCatalogueComponent,
     FoodCatalogueComponent,
     LaptopCatalogueComponent,
-    ToyCatalogueComponent
+    ToyCatalogueComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -57,7 +61,9 @@ import { ButtonModule } from 'primeng/button';
     ButtonModule,
     InputTextModule,
     CardModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DropdownModule,
+    BrowserAnimationsModule
   ],
  
   providers: [],
