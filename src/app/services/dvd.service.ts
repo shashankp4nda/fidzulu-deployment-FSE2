@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class DvdService {
   dvd: Dvd[]= [];
-  private dvdUrl="";
-  private url="";
+  public dvdUrl="";
+  public url="";
 
   getDvds(): Observable<Dvd[]>{
    
