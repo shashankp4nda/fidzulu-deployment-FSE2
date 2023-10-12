@@ -15,7 +15,7 @@ export class ToyService {
   getToys(): Observable<Toy[]>{
     this.url =  this.toyUrl + this.dropDownService.getSelectedValue();
     console.log(this.url);
-    return this.http.get<Toy[]>(this.toyUrl).pipe(catchError(this.handleError));
+    return this.http.get<Toy[]>(this.url).pipe(catchError(this.handleError));
   }
 
   handleError(response: HttpErrorResponse) { 

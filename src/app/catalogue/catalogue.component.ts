@@ -50,7 +50,7 @@ export class CatalogueComponent implements OnInit {
       else
         this.code = 'US-NC'
       this.dropDownService.setSelectedValue(this.selectedCountry);
-    //   this.bikeService.processSelectedCountry();
+      this.bikeService.processSelectedCountry();
      this.bookService.processSelectedCountry();
     //   this.dvdService.processSelectedCountry();
     //   this.foodService.processSelectedCountry();
