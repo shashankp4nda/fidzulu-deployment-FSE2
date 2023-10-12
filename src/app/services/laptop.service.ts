@@ -8,11 +8,17 @@ import { Laptop } from '../models/laptop.model';
 export class LaptopService {
 
   laptops: Laptop[]= [];
-  private foodUrl="";
+  private laptopUrl="";
+  private url="";
 
   getLaptops(): Observable<Laptop[]>{
-    return this.http.get<Laptop[]>(this.foodUrl);
+    return this.http.get<Laptop[]>(this.url);
   }
 
   constructor(private http: HttpClient) { }
+
+  processSelectedCountry(selectedCountry: string) {
+    this.url =  this.laptopUrl + selectedCountry;
+    console.log(`Selected value is: ${this.url}`);
+  }
 }

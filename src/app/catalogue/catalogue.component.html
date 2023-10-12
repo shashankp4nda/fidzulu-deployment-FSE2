@@ -1,4 +1,10 @@
 <div class="card">
-    <p-menubar [model]="items"></p-menubar>  
+    <p-menubar [model]="items"></p-menubar>
 </div>
+
+<select [(ngModel)]="selectedCountry" (change)="onDropdownChange()">
+    <option value="India">India</option>
+    <option value="Ireland">Ireland</option>
+    <option value="North Carolina">North Carolina</option>
+  </select>
 

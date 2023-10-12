@@ -9,14 +9,20 @@ import { Food } from '../models/food.model';
 export class FoodService {
 
   foods: Food[]= [];
-  private foodUrl="http://localhost:3021/food/all/IN";
+  private foodUrl="http://localhost:3021/food/all/";
+  private url="";
 
   getFoods(): Observable<Food[]>{
     console.log("In good service function");
     
-    return this.http.get<Food[]>(this.foodUrl);
+    return this.http.get<Food[]>(this.url);
     
   }
 
   constructor(private http: HttpClient) { }
+
+  processSelectedCountry(selectedCountry: string) {
+    this.url =  this.foodUrl + selectedCountry;
+    console.log(`Selected value is: ${this.url}`);
+  }
 }

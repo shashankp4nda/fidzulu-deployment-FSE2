@@ -9,12 +9,20 @@ import { HttpClient } from '@angular/common/http';
 export class BikeService {
 
   bikes: Bike[]= [];
-  bikeUrl:string="http://localhost:3021/bikes/all/";
+  private bikeUrl="http://localhost:3021/bikes/all/";
+  private url="";
+  filter: string | undefined;
 
   getBikes(): Observable<Bike[]>{
-    return this.http.get<Bike[]>(this.bikeUrl);
+    // return of(this.bikes);
+    return this.http.get<Bike[]>(this.url);
   }
 
   constructor(private http: HttpClient) { }
+
+  processSelectedCountry(selectedCountry: string) {
+    this.url =  this.bikeUrl + selectedCountry;
+    console.log(`Selected value is: ${this.url}`);
+  }
 
 }
