@@ -55,7 +55,7 @@ describe('LaptopCatalogueComponent', () => {
     expect(component).toBeTruthy();
   });
 
-    it('should get bikes from the service', () => {
+    it('should get laptops from the service', () => {
     component.ngOnInit();
     fixture.detectChanges();
     expect(component.laptops).toEqual(testLaptops);
