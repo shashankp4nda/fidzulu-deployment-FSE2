@@ -18,7 +18,7 @@ export class AboutComponent implements OnInit{
   toyTeam: Team[] = [];
  
   items: any = [    
-    ["Front-End team", "Angular", "assets/front.jpeg", "As a memeber of the front end team, I can comfirm that the front end team is the best", ""],
+    ["Front-End team", "Angular", "assets/front.jpeg", "As a meme\ber of the front end team, I can confirm that the front end team is the best", ""],
     ["Middle-Tier team", "NodeJS", "assets/middle.jpeg", "our middle tier team is amazing", ],
     ["Back-End team", "SpringBoot", "https://www.webdesignlane.com/assets/images/av/03.jpg", "and guess what? our backend team is pretty good too", ""]
   ];
