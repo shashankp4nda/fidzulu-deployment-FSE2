@@ -10,6 +10,7 @@ import { FoodService } from '../services/food.service';
 import { CatalogueComponent } from '../catalogue/catalogue.component';
 import { Food } from '../models/food.model';
 import { of } from 'rxjs';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('FoodCatalogueComponent', () => {
   let mockFoodService:any = jasmine.createSpyObj('FoodService',['getFoods']);
@@ -39,7 +40,8 @@ describe('FoodCatalogueComponent', () => {
       RatingModule,
       MenubarModule,
       AppRoutingModule,
-      FormsModule
+      FormsModule,
+      HttpClientModule
     ]
     })
     .compileComponents();

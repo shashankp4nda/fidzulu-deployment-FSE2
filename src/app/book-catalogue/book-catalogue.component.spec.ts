@@ -9,6 +9,7 @@ import { Book } from '../models/book.model';
 import { of } from 'rxjs';
 import { AppRoutingModule } from '../app-routing/app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('BookCatalogueComponent', () => {
   let mockBookService:any = jasmine.createSpyObj('BookService',['getBooks']);
@@ -40,7 +41,8 @@ describe('BookCatalogueComponent', () => {
       RatingModule,
       MenubarModule,
       AppRoutingModule,
-      FormsModule
+      FormsModule,
+      HttpClientModule
     ]
     })
     .compileComponents();

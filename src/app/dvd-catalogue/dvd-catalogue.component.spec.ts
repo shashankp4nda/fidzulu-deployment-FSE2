@@ -10,6 +10,7 @@ import { CatalogueComponent } from '../catalogue/catalogue.component';
 import { MenubarModule } from 'primeng/menubar';
 import { Dvd } from '../models/dvd.model';
 import { of } from 'rxjs';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('DvdCatalogueComponent', () => {
   let mockDvdService:any = jasmine.createSpyObj('DvdService',['getDvds']);
@@ -41,7 +42,8 @@ describe('DvdCatalogueComponent', () => {
       RatingModule,
       AppRoutingModule,
       FormsModule,
-      MenubarModule
+      MenubarModule,
+      HttpClientModule
     ]
     })
     .compileComponents();
