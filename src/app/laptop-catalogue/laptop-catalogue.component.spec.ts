@@ -10,6 +10,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { AppRoutingModule } from '../app-routing/app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { CatalogueComponent } from '../catalogue/catalogue.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('LaptopCatalogueComponent', () => {
   let component: LaptopCatalogueComponent;
@@ -41,7 +42,8 @@ describe('LaptopCatalogueComponent', () => {
       RatingModule,
       MenubarModule,
       AppRoutingModule,
-      FormsModule
+      FormsModule,
+      HttpClientModule
     ]
     })
     .compileComponents();

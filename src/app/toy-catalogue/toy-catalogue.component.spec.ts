@@ -10,6 +10,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { AppRoutingModule } from '../app-routing/app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { CatalogueComponent } from '../catalogue/catalogue.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('ToyCatalogueComponent', () => {
   let mockToyService:any = jasmine.createSpyObj('ToyService',['getToys']);
@@ -39,7 +40,8 @@ describe('ToyCatalogueComponent', () => {
       RatingModule,
       MenubarModule,
       AppRoutingModule,
-      FormsModule
+      FormsModule,
+      HttpClientModule
     ]
     })
     .compileComponents();

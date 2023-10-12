@@ -10,6 +10,7 @@ import { Bike } from '../models/bike.model';
 import { of } from 'rxjs';
 import { AppRoutingModule } from '../app-routing/app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('BikeCatalogueComponent', () => {
   let mockBikeService:any = jasmine.createSpyObj('BikeService',['getBikes']);
@@ -40,7 +41,8 @@ describe('BikeCatalogueComponent', () => {
       RatingModule,
       MenubarModule,
       AppRoutingModule,
-      FormsModule
+      FormsModule,
+      HttpClientModule
     ]
     })
     .compileComponents();
