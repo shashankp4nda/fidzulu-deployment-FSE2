@@ -9,7 +9,7 @@ import { DropDownService } from './drop-down.service';
 })
 export class ToyService {
   toys: Toy[]= [];
-  public toyUrl="http://54.90.86.99:3021/toys/all/IN";
+  public toyUrl="http://54.90.86.99:3021/toys/all/";
   public url="";
 
   getToys(): Observable<Toy[]>{
