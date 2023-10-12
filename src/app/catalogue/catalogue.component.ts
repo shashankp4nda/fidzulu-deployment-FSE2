@@ -7,6 +7,7 @@ import { DvdService } from '../services/dvd.service';
 import { ToyService } from '../services/toy.service';
 import { FoodService } from '../services/food.service';
 import { LaptopService } from '../services/laptop.service';
+import { DropDownService } from '../services/drop-down.service';
 
 // interface Country {
 //   name: string;
@@ -33,11 +34,13 @@ export class CatalogueComponent implements OnInit {
         {label: 'Laptops', routerLink:'/laptop-catalogue'},
         {label: 'Toys', routerLink:'/toy-catalogue'}
       ];
+      this.selectedCountry = this.dropDownService.getSelectedValue();
     }
 
     constructor(private bikeService: BikeService, private laptopService: LaptopService,
       private bookService: BookService, private dvdService: DvdService,
-      private foodService: FoodService, private toyService: ToyService){}
+      private foodService: FoodService, private toyService: ToyService,
+      private dropDownService: DropDownService){}
 
     onDropdownChange() {
       if(this.selectedCountry==='India')
@@ -46,6 +49,7 @@ export class CatalogueComponent implements OnInit {
         this.code = 'IE';
       else
         this.code = 'US-NC'
+      this.dropDownService.setSelectedValue(this.selectedCountry);
       this.bikeService.processSelectedCountry(this.code);
       this.bookService.processSelectedCountry(this.code);
       this.dvdService.processSelectedCountry(this.code);
