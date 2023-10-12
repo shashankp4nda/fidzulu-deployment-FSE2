@@ -37,9 +37,9 @@ export class BikeService implements OnInit{
 
   constructor(private http: HttpClient, private dropDownService: DropDownService) { }
 
-  // processSelectedCountry() {
-  //   this.url =  this.bikeUrl + this.dropDownService.getSelectedValue();
-  //   console.log(`Selected value is: ${this.url}`);
-  // }
+  processSelectedCountry() {
+    this.url =  this.bikeUrl + this.dropDownService.getSelectedValue();
+    console.log(`Selected value is: ${this.url}`);
+  }
 
 }

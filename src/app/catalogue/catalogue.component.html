@@ -2,9 +2,9 @@
     <p-menubar [model]="items"></p-menubar>
 </div>
 
-<select [(ngModel)]="selectedCountry" (change)="onDropdownChange()">
-    <option value="India">India</option>
-    <option value="Ireland">Ireland</option>
-    <option value="North Carolina">North Carolina</option>
+<select [(ngModel)]="selectedCountry" (change)="onDropdownChange()" >
+    <option value="IN" selected="selected">India</option>
+    <option value="IE">Ireland</option>
+    <option value="US-NC">North Carolina</option>
   </select>
 
