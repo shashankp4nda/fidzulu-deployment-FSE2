@@ -64,9 +64,9 @@ export class AboutComponent implements OnInit{
 
     console.log(this.combinedTeams);
     console.log(this.items[0][4]);
-    this.items[0][4] = this.combinedTeams[0].memberNames.join(' ');
+    this.items[0][4] = this.combinedTeams[2].memberNames.join(' ');
     console.log(this.items[0][4]);
-    this.items[1][4] = this.combinedTeams[0].memberNames.join(' ');
+    this.items[1][4] = this.combinedTeams[1].memberNames.join(' ');
     this.items[2][4] = this.combinedTeams[0].memberNames.join(' ');
 
   }
