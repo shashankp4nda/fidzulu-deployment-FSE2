@@ -12,9 +12,9 @@ describe('ToyService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
-        HttpClientTestingModule,
+        HttpClientTestingModule
       ],
-      providers: [service]
+      providers: [ToyService]
     });
     httpTestingController = TestBed.inject(HttpTestingController);
     service = TestBed.inject(ToyService);
