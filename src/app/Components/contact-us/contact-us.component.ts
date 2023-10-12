@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class ContactUsComponent {
 
+  email:String = "contact@fmr.com";
+  phone:String = "123-456-7890";
+  address:String = "245 Summer Street, Boston, MA";
+  
 }
