@@ -22,7 +22,7 @@ import { DropDownService } from '../services/drop-down.service';
 export class CatalogueComponent implements OnInit {
 
   items: MenuItem[] = [];
-  selectedCountry: string = "";
+  selectedCountry: string = "IN";
   code: string = "";
 
   ngOnInit() {
@@ -50,12 +50,12 @@ export class CatalogueComponent implements OnInit {
       else
         this.code = 'US-NC'
       this.dropDownService.setSelectedValue(this.selectedCountry);
-      this.bikeService.processSelectedCountry(this.code);
-      this.bookService.processSelectedCountry(this.code);
-      this.dvdService.processSelectedCountry(this.code);
-      this.foodService.processSelectedCountry(this.code);
-      this.toyService.processSelectedCountry(this.code);
-      this.laptopService.processSelectedCountry(this.code);
+    //   this.bikeService.processSelectedCountry();
+     this.bookService.processSelectedCountry();
+    //   this.dvdService.processSelectedCountry();
+    //   this.foodService.processSelectedCountry();
+    //   this.toyService.processSelectedCountry();
+    //   this.laptopService.processSelectedCountry(); 
       
     }
 

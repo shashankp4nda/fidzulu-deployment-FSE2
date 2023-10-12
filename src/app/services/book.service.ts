@@ -2,16 +2,18 @@ import { Injectable } from '@angular/core';
 import { Observable, catchError, throwError } from 'rxjs';
 import { Book } from '../models/book.model';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { DropDownService } from './drop-down.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BookService {
   books: Book[]= [];
-  private bookUrl="";
+  private bookUrl="http://54.90.86.99:3021/books/all/";
   private url="";
 
   getBooks(): Observable<Book[]>{
+    this.url =  this.bookUrl + this.dropDownService.getSelectedValue();
     return this.http.get<Book[]>(this.url).pipe(catchError(this.handleError));
   }
 
@@ -27,10 +29,10 @@ export class BookService {
     return throwError( () => 'Unable to contact service; please try again later.'); 
   }
   
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private dropDownService: DropDownService) { }
 
-  processSelectedCountry(selectedCountry: string) {
-    this.url =  this.bookUrl + selectedCountry;
+  processSelectedCountry() {
+    this.url =  this.bookUrl + this.dropDownService.getSelectedValue();
     console.log(`Selected value is: ${this.url}`);
   }
 }

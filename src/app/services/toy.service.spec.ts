@@ -12,7 +12,7 @@ describe('ToyService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
-        HttpClientTestingModule,
+        HttpClientTestingModule
       ],
       providers: [ToyService]
     });

@@ -1,20 +1,25 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Bike } from '../models/bike.model';
 import { Observable, catchError, of, throwError } from 'rxjs';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { DropDownService } from './drop-down.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class BikeService {
+export class BikeService implements OnInit{
+  ngOnInit(): void {
+      //this.processSelectedCountry();
+  }
 
   bikes: Bike[]= [];
-  private bikeUrl="http://localhost:3021/bikes/all/";
+  private bikeUrl="http://54.90.86.99:3021/bikes/all/";
   private url="";
   filter: string | undefined;
 
   getBikes(): Observable<Bike[]>{
     // return of(this.bikes);
+    this.url =  this.bikeUrl + this.dropDownService.getSelectedValue();
     return this.http.get<Bike[]>(this.url).pipe(catchError(this.handleError));
   }
 
@@ -30,11 +35,11 @@ export class BikeService {
     return throwError( () => 'Unable to contact service; please try again later.'); 
   }
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private dropDownService: DropDownService) { }
 
-  processSelectedCountry(selectedCountry: string) {
-    this.url =  this.bikeUrl + selectedCountry;
-    console.log(`Selected value is: ${this.url}`);
-  }
+  // processSelectedCountry() {
+  //   this.url =  this.bikeUrl + this.dropDownService.getSelectedValue();
+  //   console.log(`Selected value is: ${this.url}`);
+  // }
 
 }

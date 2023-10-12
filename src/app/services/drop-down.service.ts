@@ -6,13 +6,20 @@ import { Injectable } from '@angular/core';
 export class DropDownService {
 
   selectedValue: string = "India";
-
-  setSelectedValue(value: string) {
+  code: string = "IN";
+  public setSelectedValue(value: string) {
     this.selectedValue = value;
   }
 
-  getSelectedValue() {
-    return this.selectedValue;
+  public getSelectedValue() {
+    
+    if(this.selectedValue==='India')
+      this.code = 'IN';
+  else if(this.selectedValue==='Ireland')
+    this.code = 'IE';
+  else
+    this.selectedValue = 'US-NC'
+    return this.code;
   }
 
   constructor() { }

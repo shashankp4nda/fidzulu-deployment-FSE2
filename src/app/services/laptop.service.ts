@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, catchError, of, throwError } from 'rxjs';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Laptop } from '../models/laptop.model';
+import { DropDownService } from './drop-down.service';
 @Injectable({
   providedIn: 'root'
 })
@@ -10,8 +11,10 @@ export class LaptopService {
   laptops: Laptop[]= [];
   public laptopUrl="";
   public url="";
+  
 
   getLaptops(): Observable<Laptop[]>{
+    this.url =  this.laptopUrl + this.dropDownService.getSelectedValue();
     return this.http.get<Laptop[]>(this.url).pipe(catchError(this.handleError));
   }
 
@@ -28,10 +31,10 @@ export class LaptopService {
   }
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private dropDownService: DropDownService) { }
 
-  processSelectedCountry(selectedCountry: string) {
-    this.url =  this.laptopUrl + selectedCountry;
-    console.log(`Selected value is: ${this.url}`);
-  }
+  // processSelectedCountry(selectedCountry: string) {
+  //   this.url =  this.laptopUrl + selectedCountry;
+  //   console.log(`Selected value is: ${this.url}`);
+  // }
 }
